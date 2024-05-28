@@ -23,12 +23,12 @@ button.click()
 
 try:
     # Opening the helpdesk website
-    driver.get('https://softclans.co.ke/rfda_helpdesk/public/tickets?departments%5B%5D=Support&status%5B%5D=Closed&show%5B%5D=inbox')  # Replace with the actual URL
+    driver.get('https://softclans.co.ke/rfda_helpdesk/public/tickets?departments%5B%5D=Support&status%5B%5D=Closed&show%5B%5D=inbox') 
 
-    # Locate all the ordered links (assuming they are in an ordered list <ol>)
+    # Locating all the ordered links
     links = driver.find_elements(By.CSS_SELECTOR, 'tbody a')
 
-    # Iterate through each link
+    # Iterating through each link
     for link in links:
         # Click the link
         link.click()
@@ -38,15 +38,14 @@ try:
             # Locate the "Generate PDF" button and click it
             generate_pdf_button = driver.find_element(By.XPATH, '/html/body/div/div[1]/section/div[1]/div[5]/div[2]/div[1]/a"]')
             generate_pdf_button.click()
-            time.sleep(15)  # Adjust sleep time to ensure the PDF is generated
+            time.sleep(15)  
         except Exception as e:
             print(f"An error occurred: {e}")
 
         # Navigate back to the main page
         driver.back()
-        time.sleep(2)  # Adjust sleep time as needed
+        time.sleep(2) 
 
-        # Re-fetch the links because the DOM might have changed after navigation
         links = driver.find_elements(By.CSS_SELECTOR, 'tbody a')
 
 finally:
