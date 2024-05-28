@@ -1,0 +1,1 @@
+The helpdesk.py scriopt is a python script that tries to access a website, iterating through each of the available entries each time clicking on each entry, locating a generate PDF button and clicking it to generate the corresponding PDF  for each and every aailable entry.
