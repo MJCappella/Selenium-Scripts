@@ -18,7 +18,7 @@ driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())
 #
 #
 # password_field = driver.find_element(By.XPATH, '//*[@id="content"]/div[2]/div/div/form/div[2]/input')
-# password_field.send_keys('admin@123')
+# password_field.send_keys('xxxx')
 #
 # button = driver.find_element_by_xpath('//*[@id="content"]/div[2]/div/div/form/div[3]/button')
 # button.click()
